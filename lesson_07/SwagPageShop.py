@@ -10,13 +10,13 @@ class SwagPageShop:
     def swag(self):
         self._driver.find_element(
             By.CSS_SELECTOR, "#first-name"
-            ).send_keys("Шулекин")
+            ).send_keys("Голубцов")
         self._driver.find_element(
             By.CSS_SELECTOR, "#last-name"
-            ).send_keys("Александр")
+            ).send_keys("Артем")
         self._driver.find_element(
             By.CSS_SELECTOR, "#postal-code"
-            ).send_keys("397631")
+            ).send_keys("301470")
         self._driver.find_element(By.CSS_SELECTOR, "#continue").click()
         sum = self._driver.find_element(
             By.CSS_SELECTOR, "[data-test='total-label']"
