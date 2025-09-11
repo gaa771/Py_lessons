@@ -3,9 +3,13 @@ from selenium.webdriver.common.by import By
 
 class CheckoutPageShop:
     def __init__(self, driver):
-        self._driver = driver
-        self._driver.get("https://www.saucedemo.com/cart.html")
-        self._driver.maximize_window()
+        self.driver = driver
+        self.driver.maximize_window()
+
+    def open(self):
+        self.driver.get(
+            "https://www.saucedemo.com/cart.html"
+            )
 
     def checkout(self):
-        self._driver.find_element(By.CSS_SELECTOR, "#checkout").click()
+        self.driver.find_element(By.CSS_SELECTOR, "#checkout").click()

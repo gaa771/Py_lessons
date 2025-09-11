@@ -16,13 +16,18 @@ def driver():
 
 def test_shop(driver):
     form_page = AutorizPageShop(driver)
+    form_page.open()
     form_page.autoriz()
     form_page = CartPageShop(driver)
+    form_page.open()
     form_page.cart()
     form_page = CheckoutPageShop(driver)
+    form_page.open()
     form_page.checkout()
     form_page = SwagPageShop(driver)
+    form_page.open()
     form_page.swag()
     form_page = ResultPageShop(driver)
-    sum = form_page.result()
-    assert sum == "Total: $58.29"
+    form_page.open()
+    total = form_page.result()
+    assert total == "Total: $58.29"
